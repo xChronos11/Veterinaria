@@ -15,7 +15,13 @@ namespace Veterinaria.Web
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            this.CheckRoles();
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        private void CheckRoles()
+        {
+            
         }
     }
 }

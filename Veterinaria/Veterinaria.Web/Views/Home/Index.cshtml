@@ -1,4 +1,92 @@
 ﻿@{
     ViewBag.Title = "Home Page";
-}
+    Layout = null;
 
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Veterinaria</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="@Url.Action("Index","Home")">Veterinaria</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action("Index","Home")">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action("About","Home")">Acerca de</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action("Contact","Home")">Contacto</a>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Register","Account")">Registro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Login","Account")">Inicio de Sesión</a>
+            </li>
+        </ul>
+
+
+    </nav>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action("Index","Home")">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action("About","Home")">Acerca de</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action("Contact","Home")">Contacto</a>
+        </ul>
+    </div>
+
+    <header class="">
+        <div class="masthead-content">
+            <img src="~/Content/img/fondo.jpg" width="1536" height="600">
+
+        </div>
+
+    </header>
+    <hr />
+    <section class="col-12">
+        <div class="card " style="width: 18rem;">
+            <img class="card-img-top" src="~/Content/img/husky.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Servicio de baño y limpieza</h5>
+                <p class="card-text">Este servicio dejara impecable a tu mascota, utilizamos metodos y tecnicas
+                de relajacion para que tu mascota se sienta satisfecha al momento de su baño.</p>
+                <a href="#" class="btn btn-primary">Haz tu consulta</a>
+            </div>
+        </div>
+    </section>
+    <div class="container body-content">
+
+        <hr />
+        <footer class="text-center">
+            <p>&copy; @DateTime.Now.Year - Diaz Urias Francisco Javier</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+</body>
+ 
+
+
+</html>
